@@ -1,0 +1,398 @@
+.root-landing-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00815.JPG");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    .mbg{
+        height: 100%;
+        text-align: center;
+        align-content: center;
+        color: white;
+        transition: all 1s ease;
+        font-size: 5rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+}
+
+.hands-together-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00886.JPG");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: max(100vh, 100vw);
+    width: 100%;
+}
+
+.meet-couple-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00943.JPG");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 25%;
+}
+
+.meet-bride-img{
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../../../../public/images/personal/YPS01040.JPG"),
+    url("../../../../public/images/pint/download-7.jpg") ;
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+    border-radius: 0 20px;
+    background-size: cover, contain;
+    background-position: inherit;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    .bit {
+      text-align: left;
+      padding: 4% 2% 0 0;;
+      float: right;
+      width: 50%;
+      font-size: clamp(1.5rem, 3vw, 5rem);
+      font-weight: 600;
+    }
+}
+.meet-groom-img{
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../../../../public/images/personal/YPS01060.JPG"),
+    url("../../../../public/images/pint/download-7.jpg");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+    border-radius: 0 20px;
+    background-size: cover, contain;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    .git{
+      padding: 4% 0 0 4%;
+      width: 50%;
+      font-size: clamp(1.5rem, 3vw, 5rem);
+      font-weight: 600;
+    }
+}
+
+.events-container {
+  background-image: url("../../../../public/images/pint/download-7.jpg");
+  text-align: center;
+  // color: white;
+  align-content: space-evenly;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 15% 0;
+  
+  .hashtag {
+    justify-items: center;
+  }
+  .insta-logo {
+    width: 60px;
+    height: 60px;
+    background-image: url("../../../../public/svg/insta-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  .txt {
+    padding: 7%;
+    border-radius: 30% 0;
+    text-align: center;
+  }
+}
+
+.things-to-know {
+  background-image: url("../../../../public/images/pint/download-7.jpg");
+  text-align: center;
+  // color: white;
+  // align-content: space-evenly;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10% 5%;
+  color: #734836;
+  .hashtag {
+    justify-items: center;
+  }
+  .insta-logo {
+    width: 120px;
+    height: 120px;
+    margin: 10%;
+    background-image: url("../../../../public/svg/insta-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  .txt {
+    padding: 7%;
+    border-radius: 30% 0;
+    text-align: center;
+  }
+}
+
+.memories-container {
+  padding: 6% 6% 20% 6%;
+  background-image: url("../../../../public/images/pint/download-7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #734836;
+  
+  .msg {
+    padding: 7%;
+    border-radius: 30% 0;
+    text-align: center;
+    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  }
+  
+  .pad {
+    // padding-top: 15%;
+    margin-top: 10%;
+  }
+}
+
+.content {
+  // background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  border-radius: 25%;
+  padding: 12%;
+  position: absolute;
+  top: 5%;
+  color: ivory;
+  text-align: center;
+}
+.wed-title {
+    font-family: 'Tangerine',"Rasa", cursive;
+    
+    font-size: 5rem;
+    // opacity: 0;
+    font-weight: 900;
+    // min-height: 300px;
+    // transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.gtl-po {
+    width: 100%;
+    margin-top: 100vh;
+    text-align: center;
+    color: white;
+    transition: all 1s ease;
+    font-weight: 600;
+    .ost {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin: 10% 0 0 0;
+    /* text-align: center; */
+}
+
+  .g-l{
+    height: 140px;
+    margin: 4% 0;
+  }
+
+  .para {
+    font-size: 1.875rem;
+    padding: 0% 5%;
+  }
+
+  .nm {
+    font-family: "Tangerine","Rasa", cursive;
+    font-size: 7rem;
+    text-align: left;
+  }
+  .t {
+    text-align: right;
+    padding-right: 4%;
+  }
+
+}
+
+// .section-1 {
+//   mask-image: linear-gradient(
+//     to bottom,
+//     black 70%,
+//     transparent
+//   );
+
+//   -webkit-mask-image: linear-gradient(
+//     to bottom,
+//     black 70%,
+//     transparent
+//   );
+// }
+
+// .section-2 {
+//   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+// }
+
+// .section-2 {
+//   margin-top: -120px;
+//   position: relative;
+//   z-index: 2;
+// }
+
+// .section-2::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background: rgba(0,0,0,0.3);
+// }
+
+.down-fade::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1)
+  );
+}
+.up-fade::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1)
+  );
+}
+
+.photo-frame-up::before,
+.photo-frame-down::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  border: 4px solid #c9a36b;
+}
+
+.photo-frame-up::before {
+  top: 0;
+  left: 0;
+
+  border-right: none;
+  border-bottom: none;
+}
+
+.photo-frame-down::after {
+  bottom: 0;
+  right: 0;
+
+  border-left: none;
+  border-top: none;
+  justify-self: self-end;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 80vw;
+  height: 70vh;
+  margin: auto;
+  padding: 4% 0;
+}
+
+.slideshow .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 20px;
+  background: linear-gradient(315deg, #d1ccc6, transparent), rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* modern shadow */
+  border: 4px double #734836;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slideshow .img.active {
+  opacity: 1;
+}
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dots span:hover {
+  transform: scale(1.2);
+}
+
+.dots span.active {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+.countdown-t {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5%;
+}
+
+@media (min-width: 576px) {
+  .slideshow img {
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  .meet-bride-img, .meet-groom-img{
+    .bit, .git {
+      font-size: clamp(1.1rem, 3vw, 3rem);
+    }
+  }
+}
+
+.tj-g-lc {
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  padding-top: 1%;
+  .tj-g-l {
+    height: 15%;
+    width: 15%;
+    transform: rotate(2deg);
+  }
+}

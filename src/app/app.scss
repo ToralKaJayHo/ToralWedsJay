@@ -1,0 +1,18 @@
+.audio-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding: 5px 6px 0px 6px;
+    border-radius: 25%;
+    color: #e8e3dd;
+    background: linear-gradient(0deg, #734836, transparent), linear-gradient(126deg, #734836, transparent);
+    border: 2px double #e8e3dd;
+}
+
+.lang-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: linear-gradient(180deg, #d1ccc6, transparent), rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}

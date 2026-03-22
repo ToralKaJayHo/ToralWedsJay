@@ -1,0 +1,20 @@
+<div class="fade-in" [class.show]="isLoaded">
+  <app-hero></app-hero>
+  <h1>{{ 'WELCOME' | translate }}</h1>
+<p>{{ 'INVITE' | translate }}</p>
+  <audio #bgMusic loop>
+    <source [src]="audioSrc" type="audio/mpeg">
+  </audio>
+
+  <div class="lang-btn">
+    <button class="btn bold" (click)="switchLang('en')">English</button>
+    <button class="btn" (click)="switchLang('guj')">ગુજરાતી</button>
+  </div>
+
+  <button class="audio-btn" (click)="toggleMusic()">
+    <span class="material-icons">
+      {{ isPlaying ? 'pause' : 'play_arrow' }}
+    </span>
+  </button>
+
+</div>

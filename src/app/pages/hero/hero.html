@@ -1,0 +1,241 @@
+<div #handsTogether class="hands-together-img" >
+    <div class="photo-frame-up photo-frame-down"></div>
+    <div class="tj-g-lc">
+        <div class="tj-g-l"></div>
+    </div>
+</div>
+
+
+<div #hero class="hero root-landing-img  " >
+    <div class="photo-frame-up photo-frame-down"></div>
+    <div class="mbg fade-in" [ngClass]="{'show': !isparrallaxVisible}">
+        <div>
+            <span>{{ i18nLabels.meet | translate }}</span>
+        </div>
+        <div>
+            <span>{{ i18nLabels.the | translate }}</span>
+        </div>
+        <div>
+            <span>{{ i18nLabels.brideAndGroom | translate }}</span>
+
+        </div>
+    </div>
+</div>
+<!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
+<div #meetTheBride class="meet-bride-img" >
+    <div class="bit fade-in" [class.show]="!isparrallaxVisible" >
+        <div class="my-1">
+            <span>{{ i18nLabels.toralIsCreative | translate }}</span>
+        </div>
+        <div class="my-1">
+            <span>{{ i18nLabels.aSimpleGirl | translate }}</span>
+        </div>
+        <div class="my-1">
+            <span>{{ i18nLabels.chirpyHappyGoLucky | translate }}</span>
+        </div>
+        <div class="my-1">
+            <span>{{ i18nLabels.withHerNature | translate }}</span>
+        </div>
+    </div>
+
+    <div class="photo-frame-up"></div>
+
+</div>
+<div #meetTheGroom class="meet-groom-img " >
+    <div class="git fade-in" [class.show]="!isparrallaxVisible">
+        <!-- <h1 >tareef ke 2 shabd</h1> -->
+         <div class="my-1">
+            <span>{{ i18nLabels.jayIsCalm | translate }}</span>
+         </div>
+         <div class="my-1">
+            <span>{{ i18nLabels.talentedCoding | translate }}</span>
+         </div>
+         <div class="my-1">
+            <span>{{ i18nLabels.deeplyFamilyOriented | translate }}</span>
+         </div>
+         <div class="my-1">
+            <span>{{ i18nLabels.handsomeCharmKindHeart | translate }}</span>
+         </div>
+        <!-- <h4 >Lorem Ipsum</h4> -->
+
+    </div>
+    <div class="photo-frame-down"></div>
+</div>
+
+<div #memoriesSS class="memories-container">
+    <div class="photo-frame-up photo-frame-down"></div>
+
+    <div class="msg">
+        <h1 class="bold">
+            <span>{{ i18nLabels.aMessageFrom | translate }}</span>
+        </h1>
+        <h2 class="my-3">
+            <span>{{ i18nLabels.beganWithTwoFamilies | translate }}</span>
+        </h2>
+        <h2 class="my-3">
+            <span>{{ i18nLabels.withLoveBlessings | translate }}</span>
+        </h2>
+        <h2 class="my-1">
+            <span>{{ i18nLabels.withLove | translate }}</span>
+        </h2>
+        <h1 class="bold my-1">
+            <span>{{ i18nLabels.jayAndToral | translate }}</span>
+        </h1>
+        <div class="my-1">✨</div>
+    </div>
+    <div class="slideshow" 
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)">
+        <div *ngFor="let img of images; let i = index" class="img" [class.active]="i === currentIndex"
+        [ngStyle]="{ 'background-image': 'url(' + img + ')' }">
+            <!-- <img
+                *ngFor="let img of images; let i = index"
+                [src]="img"
+                [class.active]="i === currentIndex"
+            /> -->
+        </div>
+
+        <div class="dots">
+            <span
+                *ngFor="let img of images; let i=index"
+                (click)="currentIndex=i"
+                [class.active]="i===currentIndex">
+            </span>
+        </div>
+    </div>
+</div>
+<div #eventsTemp class="events-container">
+    <div class="photo-frame-up photo-frame-down"></div>
+
+    <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
+        
+        <h1 class="my-3" >
+            <span>{{ i18nLabels.lookingForward | translate }}</span>
+        </h1>
+        <h1 class="bold my-1">
+            <span>{{ i18nLabels.onFriday | translate }}</span>
+        </h1>
+        <h2 class="my-3"> ~~~ <span>{{ i18nLabels.venue | translate }} </span> ~~~ </h2>
+        <h2 class="my-1 bold">
+            <div>
+                <span>{{ i18nLabels.damodarWadi | translate }}</span>
+            </div>
+            <div>
+                <span>{{ i18nLabels.ashokNagar | translate }}</span>
+            </div>
+        </h2>
+        <h2 class="my-3"> ~~~ <span>{{ i18nLabels.timing | translate }}</span> ~~~ </h2>
+        <h2 class="my-3 bold">
+            <span>{{ i18nLabels.timeOnwards | translate }}</span>
+        </h2>
+        
+        <h3><a class="u my-1" (click)="onVenueClick()" >
+            <span>{{ i18nLabels.clickForDirections | translate }}</span>
+        </a></h3>
+
+        
+    </div>
+    <div class="txt">
+        <h1 class="bold my-3">
+            <span>{{ i18nLabels.thingsToKnow | translate }}</span>
+
+        </h1>
+        <h3 class="my-3">
+            <span>{{ i18nLabels.toHelpYouAtEase | translate }}</span>
+        </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 hashtag">
+                    <h1 class="bold mb-3">
+                        <span>{{ i18nLabels.hashtag | translate }}</span>
+                    </h1>
+                    <div class="insta-logo my-3"></div>
+                    <h3>
+                        <div class="my-3">
+                            <span>{{ i18nLabels.whilePostingPhotos | translate }}</span>
+                        </div>
+                        <h1 class="bold my-3"><a class="u" href="https://www.instagram.com/explore/tags/ToralKaJayHo/" target="_blank">#ToralKaJayHo</a></h1></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <div class="countdown-t">
+                        <h1 class="bold my-3">The countdown begins</h1>
+                        <div class="my-3">
+                            <span *ngIf="countdown?.days">{{countdown?.days}} days, </span> 
+                            <span>
+                                {{countdown?.hours | number:'2.0-0'}} :
+                            </span>
+                            <span>
+                                {{countdown?.minutes | number:'2.0-0'}} :
+                            </span>
+                            <span>
+                                {{countdown?.seconds | number:'2.0-0'}}
+                            </span>
+                        </div>
+                        <h3 class="my-3">
+                            <span>{{ i18nLabels.ourFamiliesAreExcitedTo | translate }}</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div #content class="content fade-out" [ngClass]="{'hide': !isparrallaxVisible}">
+    <div class="wed-title col-xs-8 offset-xs-2 col-sm-12">
+        <span>{{ i18nLabels.jayWedsToral | translate }}</span>
+    </div>
+    <!-- <div class="tj-logo"></div> -->
+    <div class="gtl-po">
+        <p class="ost">
+            <span>{{ i18nLabels.omShreeGaneshayNamah | translate }}</span>
+        </p>
+        <img class="g-l" [src]="glImg" alt="ganesha" srcset="">
+        <div class="container para">
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <div>
+                        <div>
+                            <span>{{ i18nLabels.mrDeepakAnd | translate }}</span>
+                        </div>
+                        <div>
+                            <span>{{ i18nLabels.mrsHeena | translate }}</span>
+                        </div>
+                        <span>{{ i18nLabels.requestYourGraciousPresence | translate }}</span>
+                    </div>
+                    <div class="nm">
+                        <span>{{ i18nLabels.jay | translate }}</span>
+                    </div>
+                    <p>
+                        <span>{{ i18nLabels.with | translate }}</span>
+                    </p>
+                    <div class="nm t">
+                        <span>{{ i18nLabels.toral | translate }}</span>
+                    </div>
+                    <div>
+                        <div>
+                            <span>{{ i18nLabels.modhukaNivasi | translate }}</span>
+                        </div>
+                        <div>
+                            <span>{{ i18nLabels.daughterOfMrHarshad | translate }}</span>
+                        </div>
+                        <div>
+                            <span>{{ i18nLabels.mrsMamta | translate }}</span>
+                        </div>
+                        <div>
+                            <span>{{ i18nLabels.inviteText | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div>
+       
+    </div>
+</div>
+
