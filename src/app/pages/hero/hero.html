@@ -104,6 +104,16 @@
         </div>
     </div>
 </div>
+<div #poemTemp class="poem-container">
+    <div class="photo-frame-up photo-frame-down"></div>
+    <h1 class="my-5" >
+        {{ i18nLabels.poemHeading | translate }}
+    </h1>
+    
+    <h2 class="my-3" >
+        <span class="poem" [innerHTML]="i18nLabels.toralPoem | translate"></span>
+    </h2>
+</div>
 <div #eventsTemp class="events-container">
     <div class="photo-frame-up photo-frame-down"></div>
 

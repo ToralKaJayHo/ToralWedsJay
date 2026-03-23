@@ -127,8 +127,9 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
       document.querySelector('.meet-bride-img') as HTMLElement,
       document.querySelector('.meet-groom-img') as HTMLElement,
       document.querySelector('.memories-container') as HTMLElement,
+      document.querySelector('.poem-container') as HTMLElement,
       document.querySelector('.events-container') as HTMLElement,
-    ].forEach(bg=> {
+    ].filter(b => b).forEach(bg=> {
       bg.style.transform = `translateY(${y}px)`;
     })
     setTimeout(() => {

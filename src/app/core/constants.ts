@@ -41,7 +41,9 @@ export class Constants {
     hashtag: 'hashtag',
     whilePostingPhotos: 'whilePostingPhotos',
     hashtagValue: 'hashtagValue',
-    ourFamiliesAreExcitedTo: 'ourFamiliesAreExcitedTo'
+    ourFamiliesAreExcitedTo: 'ourFamiliesAreExcitedTo',
+    toralPoem: 'toralPoem',
+    poemHeading: 'poemHeading'
 };
   public static readonly allowedLangs = ['en', 'hin', 'guj'];
 

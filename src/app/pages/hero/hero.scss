@@ -83,6 +83,24 @@
     }
 }
 
+.poem-container {
+    background-image: url("../../../../public/images/pint/download-7.jpg");
+    text-align: center;
+    // color: white;
+    align-content: space-evenly;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5% 0;
+    .poem {
+      white-space: pre-line;
+      text-align: center;
+      font-weight: 600;
+      // line-height: 1.8;
+      // font-style: italic;
+    }
+}
+
 .events-container {
   background-image: url("../../../../public/images/pint/download-7.jpg");
   text-align: center;
