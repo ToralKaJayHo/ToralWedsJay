@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Constants } from '../../core/constants';
 
@@ -23,6 +23,8 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('eventsTemp') eventsTemp!: ElementRef;
   @ViewChild('thingsToKnow') thingsToKnow!: ElementRef;
 
+  @Input() selectedlanguage!: string;
+  
   isparrallaxVisible = true;
 
   images = [
@@ -46,6 +48,8 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   weddingDate = new Date('2026-05-01T00:00:00+05:30');
   countdown: any;
   i18nLabels = Constants.i18nLabel;
+  gujLang = Constants.guj;
+
 
   constructor(
     private translate: TranslateService

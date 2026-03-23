@@ -81,7 +81,6 @@
         <h1 class="bold my-1">
             <span>{{ i18nLabels.jayAndToral | translate }}</span>
         </h1>
-        <div class="my-1">✨</div>
     </div>
     <div class="slideshow" 
     (touchstart)="onTouchStart($event)"
@@ -146,15 +145,15 @@
         
     </div>
     <div class="txt">
-        <h1 class="bold my-3">
-            <span>{{ i18nLabels.thingsToKnow | translate }}</span>
 
-        </h1>
-        <h3 class="my-3">
-            <span>{{ i18nLabels.toHelpYouAtEase | translate }}</span>
-        </h3>
         <div class="container">
-            <div class="row">
+            <div class="row" *ngIf="gujLang !== selectedlanguage">
+                <h1 class="bold my-3">
+                    <span>{{ i18nLabels.thingsToKnow | translate }}</span>
+                </h1>
+                <h3 class="my-3">
+                    <span>{{ i18nLabels.toHelpYouAtEase | translate }}</span>
+                </h3>
                 <div class="col-sm-12 hashtag">
                     <h1 class="bold mb-3">
                         <span>{{ i18nLabels.hashtag | translate }}</span>

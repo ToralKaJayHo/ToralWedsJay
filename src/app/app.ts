@@ -21,7 +21,7 @@ export class App implements OnInit {
   audioSrc = 'audio/Wedding_Piano_Music.mp3';
   isPlaying = false;
   isLoaded = false;
-
+  selectedlanguage = '';
   @ViewChild('bgMusic') bgMusic!: ElementRef<HTMLAudioElement>;
 
   constructor( 
@@ -37,15 +37,15 @@ export class App implements OnInit {
     this.isLoaded = false;
     setTimeout(() => {
      this.isLoaded = true; 
+     window.scroll({top: 0})
     });
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         const url = this.router.url; // e.g. /en
         const lang = url.split('/')[1] || 'en';
-        this.translate.use(
-          Constants.allowedLangs.includes(lang) ? lang : 'en'
-        );
+        this.selectedlanguage = Constants.allowedLangs.includes(lang) ? lang : 'en';
+        this.translate.use(this.selectedlanguage);
       });
   }
   switchLang(lang: string) {

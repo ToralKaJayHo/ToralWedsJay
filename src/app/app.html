@@ -1,5 +1,5 @@
 <div class="fade-in" [class.show]="isLoaded">
-  <app-hero></app-hero>
+  <app-hero [selectedlanguage]="selectedlanguage"></app-hero>
   <audio #bgMusic loop>
     <source [src]="audioSrc" type="audio/mpeg">
   </audio>

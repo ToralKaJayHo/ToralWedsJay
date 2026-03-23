@@ -45,6 +45,7 @@ export class Constants {
     toralPoem: 'toralPoem',
     poemHeading: 'poemHeading'
 };
-  public static readonly allowedLangs = ['en', 'hin', 'guj'];
+  public static readonly guj = 'guj';
+  public static readonly allowedLangs = ['en', 'hin', this.guj];
 
 }
