@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, NgZone, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Constants } from '../../core/constants';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-hero',
@@ -24,8 +28,9 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('thingsToKnow') thingsToKnow!: ElementRef;
 
   @Input() selectedlanguage!: string;
-  
+
   isparrallaxVisible = true;
+  initLoading = true;
 
   images = [
     'images/personal/t-j-4.jpeg',
@@ -49,10 +54,14 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   countdown: any;
   i18nLabels = Constants.i18nLabel;
   gujLang = Constants.guj;
-
+  private ticking = false;
+  elements: HTMLElement[] = [];
+  showBrideText = false;
+  showGroomText = false;
 
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    private ngZone: NgZone
   ) {}
 
   ngOnInit() {
@@ -61,87 +70,40 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.updateHeight(); 
-    });
     this.startSlideshow();
-    // this.setHeartbeatToFonts();
+    this.ngZone.runOutsideAngular(() => {
+      this.initParallax();
+    });
+    this.initLoading = true;
+    setTimeout(() => {
+      this.initLoading = false;
+    }, 1000);
   }
+
+  initParallax() {
+  gsap.to('.bg-layer', {
+    y: 0,
+    scrollTrigger: {
+      trigger: '.scene',
+      scrub: true
+    }
+  });
+
+  gsap.to('.front-layer', {
+    y: -200,
+    scrollTrigger: {
+      trigger: '.scene',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 0.5
+    }
+  });
+}
 
   ngOnDestroy() {
     clearInterval(this.wedTitleInterval);
     clearInterval(this.ssInterval);
-  }
-
-  @HostListener('window:load')
-  @HostListener('window:resize')
-  @HostListener('document:DOMContentLoaded')
-  @HostListener('window:orientationchange')
-  @HostListener('window:scroll')
-  updateHeight() {
-
-    this.hero.nativeElement.style.height = this.hero.nativeElement.offsetWidth + 'px';
-    // this.handsTogether.nativeElement.style.height = this.handsTogether.nativeElement.offsetWidth/1.5 + 'px';
-    this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.4 + 'px';
-    this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.4 + 'px';
-    
-    this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -1) + 'px';
-    const rect = this.content.nativeElement.getBoundingClientRect();
-
-    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 300;
-    if (this.isparrallaxVisible) {
-      this.setbgPositionAndScroll();
-    }
-  }
-
-  setHeartbeatToFonts() {
-    // this.wedTitleInterval = setInterval(() => {
-    const wedTitle = document.querySelector('.wed-title') as HTMLElement;
-    let margin = window.innerHeight;
-    let factor = window.innerHeight;
-    if(window.innerHeight < window.innerWidth) {
-      factor = window.innerHeight / window.innerWidth;
-      margin = window.innerHeight;
-    } else if(window.innerHeight = window.innerWidth) {
-      margin = window.innerHeight;
-      factor = 0.7;
-    } else {
-      factor = window.innerHeight / window.innerWidth ;
-      margin = window.innerHeight;
-    }
-    wedTitle.style.minHeight = factor * margin + 'px' ;
-      // if(wedTitle.style.fontSize === '5rem') {
-      //   wedTitle.style.fontSize = '6rem';
-      // } else {
-      //   wedTitle.style.fontSize = '5rem'
-      // }
-    // }, 1160);
-  }
-
-  setbgPositionAndScroll() {
-    const factorScx = window.innerWidth < 768 ? 0.75 : 0.3;
-    let y =  0;
-    if (window.scrollY > 300) {
-      // subtract start point so it starts from 0 smoothly
-      y = (window.scrollY - 300) * factorScx;
-    }
-    [
-      document.querySelector('.root-landing-img') as HTMLElement,
-      document.querySelector('.hands-together-img') as HTMLElement,
-      document.querySelector('.meet-bride-img') as HTMLElement,
-      document.querySelector('.meet-groom-img') as HTMLElement,
-      document.querySelector('.memories-container') as HTMLElement,
-      document.querySelector('.poem-container') as HTMLElement,
-      document.querySelector('.events-container') as HTMLElement,
-    ].filter(b => b).forEach(bg=> {
-      bg.style.transform = `translateY(${y}px)`;
-    })
-    setTimeout(() => {
-      const gtlPO = document.querySelector('.gtl-po') as HTMLElement;
-      gtlPO.style.marginTop = '0';
-    }, 1000);
-
-    // console.log(this.hero.nativeElement.getBoundingClientRect());
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   }
 
   startSlideshow() {

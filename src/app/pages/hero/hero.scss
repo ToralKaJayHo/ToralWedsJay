@@ -1,9 +1,7 @@
 .root-landing-img{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00815.JPG");
-    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
-
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00815_E.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
 
     height: 100%;
@@ -15,25 +13,69 @@
         color: white;
         transition: all 1s ease;
         font-size: 5rem;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     }
 }
 
 .hands-together-img{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00886.JPG");
-    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    height: max(100vh, 100vw);
+    min-height: 100vh;
+    width: 100%;
+}
+.eng-candid-hands-img {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS01690.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
     width: 100%;
 }
 
+.prasang-container {
+  text-align: center;
+  align-content: space-evenly;
+  color: white;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0
+  }
+
+  .border-box {
+    border: 4px double #c1aea7;
+    border-radius: 40px;
+    align-items: center;
+    padding: 5px 30px;
+    margin: 1%;
+    background: linear-gradient(315deg, transparent), rgba(255, 255, 255, 0.1);
+  }
+
+  .pre-line-text {
+    white-space: pre-line;
+    text-align: center;
+    font-weight: 600;
+
+    
+  }
+  a {
+      color: white;
+      font-weight: normal;
+    }
+}
 .meet-couple-img{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00943.JPG");
-    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
 
     background-size: cover;
     background-position: center;
@@ -45,71 +87,64 @@
 }
 
 .meet-bride-img{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../../../../public/images/personal/YPS01040.JPG"),
-    url("../../../../public/images/pint/download-7.jpg") ;
-    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
-    border-radius: 0 20px;
-    background-size: cover, contain;
-    background-position: inherit;
+    background: url("../../../../public/images/personal/YPS01040.JPG");
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
-
+  -webkit-mask-image: radial-gradient(ellipse at center,
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(ellipse at center,
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) 100%);
     height: 100%;
     width: 100%;
-    .bit {
-      text-align: left;
-      padding: 4% 2% 0 0;;
-      float: right;
-      width: 50%;
-      font-size: clamp(1.5rem, 3vw, 5rem);
-      font-weight: 600;
-    }
+
+}
+.meet-bride {
+    font-size: 2.6rem;
+    text-align: center;
+    align-content: end;
 }
 .meet-groom-img{
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../../../../public/images/personal/YPS01060.JPG"),
-    url("../../../../public/images/pint/download-7.jpg");
-    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
-    border-radius: 0 20px;
-    background-size: cover, contain;
-    background-position: right;
+    background: url("../../../../public/images/personal/YPS01060.JPG");
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
-
+    -webkit-mask-image: radial-gradient(ellipse at center,
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(ellipse at center,
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) 100%);
     height: 100%;
     width: 100%;
-    .git{
-      padding: 4% 0 0 4%;
-      width: 50%;
-      font-size: clamp(1.5rem, 3vw, 5rem);
-      font-weight: 600;
-    }
+    
+}
+.meet-groom {
+
+    font-size: 3rem;
+    text-align: center;
+    align-content: end;
 }
 
-.poem-container {
-    background-image: url("../../../../public/images/pint/download-7.jpg");
-    text-align: center;
-    // color: white;
-    align-content: space-evenly;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 5% 0;
-    .poem {
-      white-space: pre-line;
-      text-align: center;
-      font-weight: 600;
-      // line-height: 1.8;
-      // font-style: italic;
-    }
+.manglik-prasango {
+  background-image: url("../../../../public/images/pint/download-7.jpg");
+  text-align: center;
+  align-content: space-evenly;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .events-container {
   background-image: url("../../../../public/images/pint/download-7.jpg");
   text-align: center;
-  // color: white;
   align-content: space-evenly;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 15% 0;
+  padding: 5% 0;
   
   .hashtag {
     justify-items: center;
@@ -124,7 +159,6 @@
 
   }
   .txt {
-    padding: 7%;
     border-radius: 30% 0;
     text-align: center;
   }
@@ -133,8 +167,6 @@
 .things-to-know {
   background-image: url("../../../../public/images/pint/download-7.jpg");
   text-align: center;
-  // color: white;
-  // align-content: space-evenly;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -172,71 +204,73 @@
     padding: 7%;
     border-radius: 30% 0;
     text-align: center;
-    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   }
   
   .pad {
-    // padding-top: 15%;
     margin-top: 10%;
   }
 }
 
 .content {
-  // background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   border-radius: 25%;
   padding: 12%;
   position: absolute;
   top: 5%;
   color: ivory;
   text-align: center;
+  
+  a {
+      color: white;
+      font-weight: normal;
+    }
 }
 .wed-title {
     font-family: 'Tangerine',"Rasa", cursive;
-    
+    padding-top: 250px;
     font-size: 5rem;
-    // opacity: 0;
     font-weight: 900;
-    // min-height: 300px;
-    // transform: translateY(60px);
     transition: all 0.8s ease;
+    text-align: center;
+    color: white;
 }
 
 .gtl-po {
     width: 100%;
-    margin-top: 100vh;
     text-align: center;
     color: white;
     transition: all 1s ease;
     font-weight: 600;
+
     .ost {
-    font-size: 2.25rem;
-    font-weight: bold;
-    margin: 10% 0 0 0;
-    /* text-align: center; */
-}
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin: 10% 0 0 0;
+      /* text-align: center; */
+    }
 
-  .g-l{
-    height: 140px;
-    margin: 4% 0;
+
+    .g-l {
+      height: 140px;
+      margin: 4% 0;
+    }
+
+    .para {
+      font-size: 1.875rem;
+      padding: 0% 5%;
+    }
+
+    .nm {
+      font-family: "Tangerine", "Rasa", cursive;
+      font-size: 7rem;
+      text-align: left;
+    }
+
+    .t {
+      text-align: right;
+      padding-right: 4%;
+    }
+
   }
-
-  .para {
-    font-size: 1.875rem;
-    padding: 0% 5%;
-  }
-
-  .nm {
-    font-family: "Tangerine","Rasa", cursive;
-    font-size: 7rem;
-    text-align: left;
-  }
-  .t {
-    text-align: right;
-    padding-right: 4%;
-  }
-
-}
-
 // .section-1 {
 //   mask-image: linear-gradient(
 //     to bottom,
@@ -409,8 +443,55 @@
   justify-items: center;
   padding-top: 1%;
   .tj-g-l {
-    height: 15%;
-    width: 15%;
+    height: 150px;
+    width: 150px;
     transform: rotate(2deg);
+  }
+}
+.root-landing-img,
+.hands-together-img,
+.meet-bride-img,
+.meet-groom-img,
+.memories-container,
+.events-container {
+  will-change: transform;
+}
+
+.parallax-section {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  width: 100%;
+  will-change: transform;
+}
+
+.scene {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.front-layer {
+  position: relative;
+  z-index: 2;
+  padding: 0px 20px;
+}
+
+.double-height {
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .double-height {
+    height: 200vh;
   }
 }

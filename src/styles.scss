@@ -84,7 +84,7 @@ a {
 
 .fade-in {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 
 .fade-in.show {
@@ -94,7 +94,7 @@ a {
 
 .fade-out {
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 
 .fade-out.hide {

@@ -1,66 +1,94 @@
-<div #handsTogether class="hands-together-img" >
-    <div class="photo-frame-up photo-frame-down"></div>
-    <div class="tj-g-lc">
-        <div class="tj-g-l"></div>
-    </div>
-</div>
-
-
-<div #hero class="hero root-landing-img  " >
-    <div class="photo-frame-up photo-frame-down"></div>
-    <div class="mbg fade-in" [ngClass]="{'show': !isparrallaxVisible}">
-        <div>
-            <span>{{ i18nLabels.meet | translate }}</span>
-        </div>
-        <div>
-            <span>{{ i18nLabels.the | translate }}</span>
-        </div>
-        <div>
-            <span>{{ i18nLabels.brideAndGroom | translate }}</span>
-
+<section class="scene">
+    <div #handsTogether class="hands-together-img bg-layer" data-speed="0.2" >
+        <div class="photo-frame-up photo-frame-down"></div>
+        <div class="tj-g-lc">
+            <div class="tj-g-l"></div>
         </div>
     </div>
-</div>
+    <div class="front-layer fade-in" data-speed="-0.3" [class.show]="!initLoading">
+        <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </div>
+</section>
+
+<section class="scene" *ngIf="false">
+    <div class="eng-candid-hands-img bg-layer" >
+        <div class="photo-frame-up photo-frame-down"></div>
+    </div>
+    <div class="">
+        <!-- <ng-container [ngTemplateOutlet]="manglikPrasangoTemp"></ng-container> -->
+    </div>
+</section>
+
+<section class="scene">
+    <div #hero class="hero root-landing-img bg-layer" data-speed="0.2">
+        <div class="photo-frame-up photo-frame-down"></div>
+        <div class="mbg front-layer" data-speed="-0.3">
+            <div>
+                <span>{{ i18nLabels.meet | translate }}</span>
+            </div>
+            <div>
+                <span>{{ i18nLabels.the | translate }}</span>
+            </div>
+            <div>
+                <span>{{ i18nLabels.brideAndGroom | translate }}</span>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
-<div #meetTheBride class="meet-bride-img" >
-    <div class="bit fade-in" [class.show]="!isparrallaxVisible" >
-        <div class="my-1">
-            <span>{{ i18nLabels.toralIsCreative | translate }}</span>
-        </div>
-        <div class="my-1">
-            <span>{{ i18nLabels.aSimpleGirl | translate }}</span>
-        </div>
-        <div class="my-1">
-            <span>{{ i18nLabels.chirpyHappyGoLucky | translate }}</span>
-        </div>
-        <div class="my-1">
-            <span>{{ i18nLabels.withHerNature | translate }}</span>
+<section class="scene double-height" (click)="showBrideText = !showBrideText">
+    <div class="photo-frame-up photo-frame-down"></div>
+    <div class="row">
+        <div class="col-sm-12">
+                <div #meetTheBride class="bg-layer meet-bride-img fade-out"  [class.hide]="showBrideText"></div>
+                <div class="p-3 meet-bride ">
+                    <div class="my-1">
+                        <span>{{ i18nLabels.toralIsCreative | translate }}</span>
+                    </div>
+                    <div class="my-1">
+                        <span>{{ i18nLabels.aSimpleGirl | translate }}</span>
+                    </div>
+                    <div class="my-1">
+                        <span>{{ i18nLabels.chirpyHappyGoLucky | translate }}</span>
+                    </div>
+                    <div class="my-1">
+                        <span>{{ i18nLabels.withHerNature | translate }}</span>
+                    </div>
+                </div>
         </div>
     </div>
 
-    <div class="photo-frame-up"></div>
 
-</div>
-<div #meetTheGroom class="meet-groom-img " >
-    <div class="git fade-in" [class.show]="!isparrallaxVisible">
-        <!-- <h1 >tareef ke 2 shabd</h1> -->
-         <div class="my-1">
-            <span>{{ i18nLabels.jayIsCalm | translate }}</span>
-         </div>
-         <div class="my-1">
-            <span>{{ i18nLabels.talentedCoding | translate }}</span>
-         </div>
-         <div class="my-1">
-            <span>{{ i18nLabels.deeplyFamilyOriented | translate }}</span>
-         </div>
-         <div class="my-1">
-            <span>{{ i18nLabels.handsomeCharmKindHeart | translate }}</span>
-         </div>
-        <!-- <h4 >Lorem Ipsum</h4> -->
+</section>
 
+<section class="scene double-height" (click)="showGroomText = !showGroomText">
+    <div class="photo-frame-up photo-frame-down"></div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div #meetTheGroom class="meet-groom-img bg-layer fade-out" [class.hide]="showGroomText"></div>
+                <div class="p-3 meet-groom">
+                    <div class="my-1">
+                        <span>{{ i18nLabels.jayIsCalm | translate }}</span>
+                    </div>
+                    <div class="my-1">
+                        <span>{{ i18nLabels.talentedCoding | translate }}</span>
+                    </div>
+                    <div class="my-1">
+                        <span>{{ i18nLabels.deeplyFamilyOriented | translate }}</span>
+                    </div>
+                    <div class="my-1">
+                        <span>{{ i18nLabels.handsomeCharmKindHeart | translate }}</span>
+                    </div>
+
+                </div>
+        </div>
     </div>
-    <div class="photo-frame-down"></div>
-</div>
+
+</section>
+
+
 
 <div #memoriesSS class="memories-container">
     <div class="photo-frame-up photo-frame-down"></div>
@@ -103,53 +131,15 @@
         </div>
     </div>
 </div>
-<div #poemTemp class="poem-container">
-    <div class="photo-frame-up photo-frame-down"></div>
-    <h1 class="my-5" >
-        {{ i18nLabels.poemHeading | translate }}
-    </h1>
-    
-    <h2 class="my-3" >
-        <span class="poem" [innerHTML]="i18nLabels.toralPoem | translate"></span>
-    </h2>
-</div>
 <div #eventsTemp class="events-container">
     <div class="photo-frame-up photo-frame-down"></div>
 
-    <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
-        
-        <h1 class="my-3" >
-            <span>{{ i18nLabels.lookingForward | translate }}</span>
-        </h1>
-        <h1 class="bold my-1">
-            <span>{{ i18nLabels.onFriday | translate }}</span>
-        </h1>
-        <h2 class="my-3"> ~~~ <span>{{ i18nLabels.venue | translate }} </span> ~~~ </h2>
-        <h2 class="my-1 bold">
-            <div>
-                <span>{{ i18nLabels.damodarWadi | translate }}</span>
-            </div>
-            <div>
-                <span>{{ i18nLabels.ashokNagar | translate }}</span>
-            </div>
-        </h2>
-        <h2 class="my-3"> ~~~ <span>{{ i18nLabels.timing | translate }}</span> ~~~ </h2>
-        <h2 class="my-3 bold">
-            <span>{{ i18nLabels.timeOnwards | translate }}</span>
-        </h2>
-        
-        <h3><a class="u my-1" (click)="onVenueClick()" >
-            <span>{{ i18nLabels.clickForDirections | translate }}</span>
-        </a></h3>
-
-        
-    </div>
     <div class="txt">
-
         <div class="container">
             <div class="row" *ngIf="gujLang !== selectedlanguage">
                 <h1 class="bold my-3">
                     <span>{{ i18nLabels.thingsToKnow | translate }}</span>
+
                 </h1>
                 <h3 class="my-3">
                     <span>{{ i18nLabels.toHelpYouAtEase | translate }}</span>
@@ -192,7 +182,7 @@
     </div>
 </div>
 
-<div #content class="content fade-out" [ngClass]="{'hide': !isparrallaxVisible}">
+<ng-template #content class="content fade-out">
     <div class="wed-title col-xs-8 offset-xs-2 col-sm-12">
         <span>{{ i18nLabels.jayWedsToral | translate }}</span>
     </div>
@@ -223,7 +213,7 @@
                     <div class="nm t">
                         <span>{{ i18nLabels.toral | translate }}</span>
                     </div>
-                    <div>
+                    <div class="py-5">
                         <div>
                             <span>{{ i18nLabels.modhukaNivasi | translate }}</span>
                         </div>
@@ -242,9 +232,194 @@
             </div>
 
         </div>
+        
+        <div *ngIf="gujLang !== selectedlanguage">
+        
+            <h1 class="my-3" >
+                <span>{{ i18nLabels.lookingForward | translate }}</span>
+            </h1>
+            <h1 class="bold my-1">
+                <span>{{ i18nLabels.onFriday | translate }}</span>
+            </h1>
+            <h2 class="my-3"> ~~~ <span>{{ i18nLabels.venue | translate }} </span> ~~~ </h2>
+            <h2 class="my-1 bold">
+                <div>
+                    <span>{{ i18nLabels.damodarWadi | translate }}</span>
+                </div>
+                <div>
+                    <span>{{ i18nLabels.ashokNagar | translate }}</span>
+                </div>
+            </h2>
+            <h2 class="my-3"> ~~~ <span>{{ i18nLabels.timing | translate }}</span> ~~~ </h2>
+            <h2 class="my-3 bold">
+                <span>{{ i18nLabels.timeOnwards | translate }}</span>
+            </h2>
+            
+            <h3><a class="u my-1" (click)="onVenueClick()" >
+                <span>{{ i18nLabels.clickForDirections | translate }}</span>
+            </a></h3>
+
+            
+        </div>
     </div>
     <div>
        
     </div>
-</div>
+</ng-template>
 
+<!-- <ng-template #manglikPrasangoTemp>
+    <div class="container prasang-container" *ngIf="gujLang === selectedlanguage">
+        <div class="container row my-3">
+            <div class="col-sm-4">
+                <h3  >{{ i18nLabels.shreeGaneshayNamah | translate }}</h3  >
+            </div>
+            <div class="col-sm-4">
+                <h3  >{{ i18nLabels.jayShreeKrishna | translate }}</h3  >
+            </div>
+            <div class="col-sm-4">
+                <h3  >{{ i18nLabels.shreePithadMaa | translate }}</h3  >
+            </div>
+        </div>
+        <div class="container row my-3">
+            <div class="col-sm-12">
+                <h3>{{ i18nLabels.riddhiSiddhiSahit | translate }}</h3>
+                <h3>{{ i18nLabels.sahkutumbPadharjo | translate }}</h3>
+
+            </div>
+        </div>
+        <div class="container row my-3">
+            <div class="col-sm-12">
+                <h1>{{ i18nLabels.manglikPrasango | translate }}</h1>
+            </div>
+        </div>
+        <div class="container row my-3">
+            <div class="col-sm-12">
+                <h2   class="border-box" [innerHTML]="i18nLabels.savant208230AprNaRoj | translate" ></h2  >
+            </div>
+        </div>
+        <div class="container row my-3">
+            <div class="col-sm-6">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.randalMaaPooja | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.randalMaaTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.ganeshSthapna | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.ganeshSthapnaTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.mandapMuhrat | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.mandapMuhratTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.svaruchiBhojan | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.svaruchiBhojanTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.mameru | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.mameruTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.haldiPithi | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.haldiPithiTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 offset-sm-3">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.sangeetSandhya | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.sangeetSandhyaTime | translate }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container row my-3">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="border-box pre-line-text">
+                    <h4>{{ i18nLabels.shubhSthalSaiMandirHall | translate }}</h4>
+                    <h1>{{ i18nLabels.shubhSthalSaiMandirHallTime | translate }}</h1>
+                    <a class="u my-1" href="https://maps.app.goo.gl/6JBR1KTp78MwkyEy5" target="_blank">
+                        <h4>{{ i18nLabels.clickForDirections | translate }}</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container row my-3">
+            <div class="col-sm-12 my-3">
+                <h2   class="border-box" [innerHTML]="i18nLabels.savant1May | translate" ></h2  >
+            </div>
+            <div class="col-sm-5 offset-sm-1 my-3">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.jaanPrasthan | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.jaanPrasthanTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-5 my-3">
+                <div class="border-box pre-line-text">
+                    <h4>
+                        {{ i18nLabels.hastMelap | translate }}
+                    </h4>
+                    <h1>
+                        {{ i18nLabels.hastMelapTime | translate }}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-sm-12 my-3 border-box">
+                <h4 class="pre-line-text">{{ i18nLabels.venue | translate }}</h4>
+                <h1 class="pre-line-text">{{ i18nLabels.damodarWadi | translate }}</h1>
+                <h1>{{ i18nLabels.ashokNagar | translate }}</h1>
+                <a class="u my-1" href="https://maps.app.goo.gl/jkqGjUc2i17r7ApJA" target="_blank">
+                    <h4>{{ i18nLabels.clickForDirections | translate }}</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-template> -->
+
+<!-- <section class="parallax-section">
+  <img src="glImg" class="parallax-img" />
+</section> -->
