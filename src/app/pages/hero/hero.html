@@ -10,12 +10,12 @@
     </div>
 </section>
 
-<section class="scene" *ngIf="false">
+<section class="scene" *ngIf="gujLang === selectedlanguage">
     <div class="eng-candid-hands-img bg-layer" >
         <div class="photo-frame-up photo-frame-down"></div>
     </div>
-    <div class="">
-        <!-- <ng-container [ngTemplateOutlet]="manglikPrasangoTemp"></ng-container> -->
+    <div>
+        <ng-container [ngTemplateOutlet]="manglikPrasangoTemp"></ng-container>
     </div>
 </section>
 
@@ -131,7 +131,20 @@
         </div>
     </div>
 </div>
-<div #eventsTemp class="events-container">
+<section class="scene">
+    <div #poemTemp class="poem-container bg-layer">
+        <div class="photo-frame-up photo-frame-down"></div>
+        <h1 class="my-3 bold" >
+            {{ i18nLabels.poemHeading | translate }}
+        </h1>
+        
+        <h3 class="my-2" >
+            <span class="poem" [innerHTML]="i18nLabels.toralPoem | translate"></span>
+        </h3>
+    </div>
+
+</section>
+<div #eventsTemp class="events-container ">
     <div class="photo-frame-up photo-frame-down"></div>
 
     <div class="txt">
@@ -153,7 +166,7 @@
                         <div class="my-3">
                             <span>{{ i18nLabels.whilePostingPhotos | translate }}</span>
                         </div>
-                        <h1 class="bold my-3"><a class="u" href="https://www.instagram.com/explore/tags/ToralKaJayHo/" target="_blank">#ToralKaJayHo</a></h1></h3>
+                        <h1 class="bold my-3"><a class="u" href="https://www.instagram.com/toralkajayho/" target="_blank">#ToralKaJayHo</a></h1></h3>
                 </div>
             </div>
             <div class="row">
@@ -267,16 +280,16 @@
     </div>
 </ng-template>
 
-<!-- <ng-template #manglikPrasangoTemp>
+<ng-template #manglikPrasangoTemp>
     <div class="container prasang-container" *ngIf="gujLang === selectedlanguage">
         <div class="container row my-3">
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-6 my-2">
                 <h3  >{{ i18nLabels.shreeGaneshayNamah | translate }}</h3  >
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-6 my-2">
                 <h3  >{{ i18nLabels.jayShreeKrishna | translate }}</h3  >
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-12 my-2">
                 <h3  >{{ i18nLabels.shreePithadMaa | translate }}</h3  >
             </div>
         </div>
@@ -301,16 +314,6 @@
             <div class="col-sm-6">
                 <div class="border-box pre-line-text">
                     <h4>
-                        {{ i18nLabels.randalMaaPooja | translate }}
-                    </h4>
-                    <h1>
-                        {{ i18nLabels.randalMaaTime | translate }}
-                    </h1>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="border-box pre-line-text">
-                    <h4>
                         {{ i18nLabels.ganeshSthapna | translate }}
                     </h4>
                     <h1>
@@ -328,7 +331,7 @@
                     </h1>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 offset-sm-3">
                 <div class="border-box pre-line-text">
                     <h4>
                         {{ i18nLabels.svaruchiBhojan | translate }}
@@ -338,75 +341,11 @@
                     </h1>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="border-box pre-line-text">
-                    <h4>
-                        {{ i18nLabels.mameru | translate }}
-                    </h4>
-                    <h1>
-                        {{ i18nLabels.mameruTime | translate }}
-                    </h1>
-                </div>
-            </div>
-            
-            <div class="col-sm-6">
-                <div class="border-box pre-line-text">
-                    <h4>
-                        {{ i18nLabels.haldiPithi | translate }}
-                    </h4>
-                    <h1>
-                        {{ i18nLabels.haldiPithiTime | translate }}
-                    </h1>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 offset-sm-3">
-                <div class="border-box pre-line-text">
-                    <h4>
-                        {{ i18nLabels.sangeetSandhya | translate }}
-                    </h4>
-                    <h1>
-                        {{ i18nLabels.sangeetSandhyaTime | translate }}
-                    </h1>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container row my-3">
-            <div class="col-sm-6 offset-sm-3">
-                <div class="border-box pre-line-text">
-                    <h4>{{ i18nLabels.shubhSthalSaiMandirHall | translate }}</h4>
-                    <h1>{{ i18nLabels.shubhSthalSaiMandirHallTime | translate }}</h1>
-                    <a class="u my-1" href="https://maps.app.goo.gl/6JBR1KTp78MwkyEy5" target="_blank">
-                        <h4>{{ i18nLabels.clickForDirections | translate }}</h4>
-                    </a>
-                </div>
-            </div>
         </div>
         
         <div class="container row my-3">
             <div class="col-sm-12 my-3">
                 <h2   class="border-box" [innerHTML]="i18nLabels.savant1May | translate" ></h2  >
-            </div>
-            <div class="col-sm-5 offset-sm-1 my-3">
-                <div class="border-box pre-line-text">
-                    <h4>
-                        {{ i18nLabels.jaanPrasthan | translate }}
-                    </h4>
-                    <h1>
-                        {{ i18nLabels.jaanPrasthanTime | translate }}
-                    </h1>
-                </div>
-            </div>
-            <div class="col-sm-5 my-3">
-                <div class="border-box pre-line-text">
-                    <h4>
-                        {{ i18nLabels.hastMelap | translate }}
-                    </h4>
-                    <h1>
-                        {{ i18nLabels.hastMelapTime | translate }}
-                    </h1>
-                </div>
             </div>
             <div class="col-sm-12 my-3 border-box">
                 <h4 class="pre-line-text">{{ i18nLabels.venue | translate }}</h4>
@@ -418,7 +357,7 @@
             </div>
         </div>
     </div>
-</ng-template> -->
+</ng-template>
 
 <!-- <section class="parallax-section">
   <img src="glImg" class="parallax-img" />

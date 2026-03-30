@@ -18,7 +18,7 @@ import { Constants } from './core/constants';
 })
 export class App implements OnInit {
   protected readonly title = signal('jay-ke-dil-ki-toral');
-  audioSrc = 'audio/Wedding_Piano_Music.mp3';
+  audioSrc = 'audio/Ranjha_Flute.mpeg';
   isPlaying = false;
   isLoaded = false;
   selectedlanguage = '';
