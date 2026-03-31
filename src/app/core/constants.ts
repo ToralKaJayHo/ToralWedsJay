@@ -74,7 +74,11 @@ export class Constants {
     jaanPrasthan: 'jaanPrasthan',
     jaanPrasthanTime: 'jaanPrasthanTime',
     hastMelap: 'hastMelap',
-    hastMelapTime: 'hastMelapTime'
+    hastMelapTime: 'hastMelapTime',
+    aboutHer: 'aboutHer',
+    bride: 'bride',
+    aboutHim: 'aboutHim',
+    groom: 'groom'
 };
   public static readonly guj = 'guj';
   public static readonly allowedLangs = ['en', 'hin', this.guj];

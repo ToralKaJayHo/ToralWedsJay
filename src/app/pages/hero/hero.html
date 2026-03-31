@@ -38,11 +38,21 @@
 </section>
 
 <!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
-<section class="scene double-height" (click)="showBrideText = !showBrideText">
+<section class="scene double-height cbl" (click)="showBrideText = !showBrideText">
     <div class="photo-frame-up photo-frame-down"></div>
     <div class="row">
         <div class="col-sm-12">
                 <div #meetTheBride class="bg-layer meet-bride-img fade-out"  [class.hide]="showBrideText"></div>
+                <div class="toggle-container">
+                    <button 
+                        [class.active]="!showBrideText" >
+                        <span>{{ i18nLabels.bride | translate }}</span>
+                    </button>
+                    <button 
+                        [class.active]="showBrideText">
+                        <span>{{ i18nLabels.aboutHer | translate }}</span>
+                    </button>
+                </div>
                 <div class="p-3 meet-bride ">
                     <div class="my-1">
                         <span>{{ i18nLabels.toralIsCreative | translate }}</span>
@@ -63,11 +73,21 @@
 
 </section>
 
-<section class="scene double-height" (click)="showGroomText = !showGroomText">
+<section class="scene double-height cbl" (click)="showGroomText = !showGroomText">
     <div class="photo-frame-up photo-frame-down"></div>
     <div class="row">
         <div class="col-sm-12">
             <div #meetTheGroom class="meet-groom-img bg-layer fade-out" [class.hide]="showGroomText"></div>
+            <div class="toggle-container">
+                    <button 
+                        [class.active]="!showGroomText" >
+                        <span>{{ i18nLabels.groom | translate }}</span>
+                    </button>
+                    <button 
+                        [class.active]="showGroomText">
+                        <span>{{ i18nLabels.aboutHim | translate }}</span>
+                    </button>
+                </div>
                 <div class="p-3 meet-groom">
                     <div class="my-1">
                         <span>{{ i18nLabels.jayIsCalm | translate }}</span>

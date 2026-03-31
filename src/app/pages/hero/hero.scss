@@ -499,3 +499,33 @@
     height: 200vh;
   }
 }
+
+.toggle-container {
+  text-align: right;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.toggle-container button {
+  border: none;
+  background: transparent;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+  &:first-child {
+    border-radius: 15px 0px 0px 15px;
+  }
+  &:last-child {
+    border-radius: 0px 15px 15px 0px;
+  }
+}
+
+.toggle-container button.active {
+  background: #734836;
+  color: white;
+}
+
+.cbl {
+  cursor: pointer;
+}
