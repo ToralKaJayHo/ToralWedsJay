@@ -81,6 +81,6 @@ export class Constants {
     groom: 'groom'
 };
   public static readonly guj = 'guj';
-  public static readonly allowedLangs = ['en', 'hin', this.guj];
+  public static readonly allowedLangs = ['en', this.guj];
 
 }
