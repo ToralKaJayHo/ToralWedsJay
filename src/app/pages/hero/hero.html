@@ -133,13 +133,8 @@
     <div class="slideshow" 
     (touchstart)="onTouchStart($event)"
     (touchend)="onTouchEnd($event)">
-        <div *ngFor="let img of images; let i = index" class="img" [class.active]="i === currentIndex"
-        [ngStyle]="{ 'background-image': 'url(' + img + ')' }">
-            <!-- <img
-                *ngFor="let img of images; let i = index"
-                [src]="img"
-                [class.active]="i === currentIndex"
-            /> -->
+        <div *ngFor="let img of images; let i = index" class="img" [class.active]="i === currentIndex">
+            <div *ngIf="i === currentIndex" class="bgi" [ngStyle]="{ 'background-image': 'url(' + img + ')' }"></div>
         </div>
 
         <div class="dots">
